@@ -1,0 +1,25 @@
+p{
+    color: #000000;
+    background-color: aqua;
+    /* R -> 00 G -> 00 B -> 00 */
+    /* R -> FF G -> FF B -> FF
+    Base 10 => 0 1 2 3 4 5 6 7 8 9 -> 10 11 12 13... 19 20
+    Base 16 => 0 1 2 ....9 A(10) B(11) C(12) D(13) E(14) F(15)
+
+    rgba(0, 0, 0, 1) -> Black
+    rgba(255, 255, 225, 1) -> White
+    0 -> 255 => 256
+    */
+}
+label{
+    background-color: blueviolet;
+}
+body{
+    background-color: #000000;
+    margin: 0px;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
