@@ -564,3 +564,74 @@ for(let indexOuter = 1; indexOuter <= 6; indexOuter++)
         }  
     console.log(strStar)
 }
+
+let str1 = "Print the Number triangle Pattern\n\
+     1\n\
+    2 2\n\
+   3 3 3\n\
+  4 4 4 4\n\
+ 5 5 5 5 5\n\
+6 6 6 6 6 6\n"
+
+// console.log(str1)
+
+// Print the Mirror Image Triangle Pattern
+// 1 2 3 4 5 6
+//  2 3 4 5 6
+//   3 4 5 6
+//    4 5 6
+//     5 6
+//      6
+//     5 6
+//    4 5 6
+//   3 4 5 6
+//  2 3 4 5 6
+// 1 2 3 4 5 6
+let spaceCount2 = 3
+let indexInnerReverse = 1
+let reversePatternString = 6
+let patternString = " "
+for(let indexOuter = 0; indexOuter < 11; indexOuter++)
+{
+    patternString = " "
+    if(indexOuter <= 5)
+    {
+        for(indexInner = 1; indexInner <= 6; indexInner++)
+        {
+            if(indexOuter >= indexInner)
+            {
+                patternString = patternString + " "
+            }
+            else
+            {
+                patternString = patternString + " " + indexInner
+            }
+        }
+    }
+    else
+    {
+        let spaceCount = 1
+        let temp = 11 - indexOuter
+        for(indexInner = 6; indexInner >= 1; indexInner--)
+        {
+            if(11 - indexOuter - spaceCount > 0)//.....
+            {
+                patternString = patternString + " "
+                spaceCount++
+            }
+            else
+            {
+                patternString = patternString + " " + temp
+                temp++
+            }
+        }
+    }
+    console.log(patternString)
+}
+/*
+indexOuter  7   8
+spaceCount  0   1   2   3
+temp        4   5   6
+indexInner  6   5   4   3   2   1
+op          _____5_6    ____4_5_6
+*/
