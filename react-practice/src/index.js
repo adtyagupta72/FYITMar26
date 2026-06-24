@@ -8,7 +8,9 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     {/* <App /> */}
-    <TestComp/>
+    <TestComp count={2} color="orange" clickFunction={()=>{
+      console.log("This is a callback function from Index.js")
+    }}/>
   </React.StrictMode>
 );
 

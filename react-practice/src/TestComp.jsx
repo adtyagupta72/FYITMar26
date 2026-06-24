@@ -9,7 +9,13 @@ import React from "react";
 
 class TestComp extends React.Component
 {
-    state = {count: 0}      //
+    constructor(props)
+    {
+        super(props)
+        console.log("Props:", props)
+    }
+    state = {count: this.props.count}  
+
     incrementCount()
     {
         //this.count++
@@ -18,9 +24,10 @@ class TestComp extends React.Component
     }
     render()
     {
-        return <div>
+        return <div style={{backgroundColor: this.props.color}}>
                 <h1>This is my Class Component! {this.state.count}</h1>
                 <br></br>
+                <button onClick={this.props.clickFunction}>Click me!</button>
                 <button onClick={()=>this.incrementCount()}>Increment count</button>
                 <button onClick={()=>console.log(this.state.count)}>Check count</button>
             </div>
