@@ -3,11 +3,13 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import TestComp from './TestComp';
+import MyClassComponent from './MyClassComponent';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    {/* <App /> */}
+    <MyClassComponent/>
     {/* <TestComp count={2} color="orange" clickFunction={()=>{
       console.log("This is a callback function from Index.js")
     }}/> */}
