@@ -1,47 +1,44 @@
 import logo from './logo.svg';
 import './App.css';
+import { useState } from 'react';
 
-// function App() {
-//   return (
-//     <div className="App">
-//       <header className="App-header">
-//         <img src={logo} className="App-logo" alt="logo" />
-//         <p>
-//           Edit <code>src/App.js</code> and save to reload.
-//         </p>
-//         <a
-//           className="App-link"
-//           href="https://reactjs.org"
-//           target="_blank"
-//           rel="noopener noreferrer"
-//         >
-//           Learn React
-//         </a>
-//       </header>
-//     </div>
-//   );
-// }
+function App() 
+{
+  const [counter, setCounter] = useState(0)
 
-// export default App;
-
-import { useState } from "react";
-// import DefaultDialog from "./DefaultDialog";
-import DialogPOC from './DilaogPOC';
-
-export default function App() {
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  let incrementCounter=()=>
+  {
+    setCounter(counter+1)
+  }
 
   return (
-    <div style={{ padding: "40px", textAlign: "center" }}>
-      <button onClick={() => setIsModalOpen(true)}>Open Default Dialog</button>
-
-      <DialogPOC 
-        isOpen={isModalOpen} 
-        onClose={() => setIsModalOpen(false)} 
-        title="Terms of Service"
-      >
-        <p>This is a native dialog box layout inside a React tree.</p>
-      </DialogPOC>
+    <div>
+      Counter: {counter}
+      <br/>
+      <button onClick={()=> incrementCounter()}>
+        Increment Counter
+      </button>
     </div>
   );
 }
+
+export default App;
+
+/*
+<div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
+        </p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+      </header>
+    </div>
+*/
