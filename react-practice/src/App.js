@@ -5,7 +5,6 @@ import { useState } from 'react';
 function App() 
 {
   const [counter, setCounter] = useState(0)
-
   let incrementCounter=()=>
   {
     setCounter(counter+1)
