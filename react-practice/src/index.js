@@ -7,14 +7,21 @@ import MyClassComponent from './MyClassComponent';
 import Parent from './Parent';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
+let myParentCallBackFunction = (message) => 
+{
+  console.log("HI From parent! ")
+  console.log("Message from child: ", message)
+}
+
 root.render(
   <React.StrictMode>
-    <App />
+    {/* <App /> */}
     {/* <MyClassComponent/> */}
     {/* <Parent/> */}
-    {/* <TestComp count={2} color="orange" clickFunction={()=>{
+    <TestComp count={2} color="orange" clickFunction={()=>{
       console.log("This is a callback function from Index.js")
-    }}/> */}
+    }} callBackFun = {myParentCallBackFunction}/>
   </React.StrictMode>
 );
 

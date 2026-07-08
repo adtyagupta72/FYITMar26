@@ -67,6 +67,10 @@ class TestComp extends React.Component
                     })}
                 </ul>
                 <button onClick={console.log(this.state.todoList)}>Test Todo List</button>
+                <br/>
+                <button onClick={()=>{
+                    this.props.callBackFun(document.getElementById("newTodo").value)
+                    }}>Call my Parent</button>
             </div>
     }
 }
