@@ -5,6 +5,8 @@ import App from './App';
 import TestComp from './TestComp';
 import MyClassComponent from './MyClassComponent';
 import Parent from './Parent';
+import ReactForms from './ReactForms';
+import ReactRouterExample from './RRouter/ReactRouterExample';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -19,9 +21,11 @@ root.render(
     {/* <App /> */}
     {/* <MyClassComponent/> */}
     {/* <Parent/> */}
-    <TestComp count={2} color="orange" clickFunction={()=>{
+    {/* <TestComp count={2} color="orange" clickFunction={()=>{
       console.log("This is a callback function from Index.js")
-    }} callBackFun = {myParentCallBackFunction}/>
+    }} callBackFun = {myParentCallBackFunction}/> */}
+    {/* <ReactForms/> */}
+    <ReactRouterExample/>
   </React.StrictMode>
 );
 
