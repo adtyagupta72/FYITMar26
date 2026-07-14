@@ -7,6 +7,7 @@ import MyClassComponent from './MyClassComponent';
 import Parent from './Parent';
 import ReactForms from './ReactForms';
 import ReactRouterExample from './RRouter/ReactRouterExample';
+import PropDrilling from './PropDrilling';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -25,7 +26,8 @@ root.render(
       console.log("This is a callback function from Index.js")
     }} callBackFun = {myParentCallBackFunction}/> */}
     {/* <ReactForms/> */}
-    <ReactRouterExample/>
+    {/* <ReactRouterExample/> */}
+    <PropDrilling/>
   </React.StrictMode>
 );
 
