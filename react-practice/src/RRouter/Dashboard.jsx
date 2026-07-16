@@ -5,6 +5,7 @@ import style from './ReusableComponents/Button.module.css'
 
 const Dashboard = () =>
 {
+    const inputElement = useRef()
     const [temp, setTemp] = useState(1)
     // var [count, setCount] = useState(0)
     useEffect(()=>{
@@ -72,6 +73,9 @@ const Dashboard = () =>
             onChange={(e) => setInputValue(e.target.value)}
         />
         <h1>Render Count: {count.current}</h1>
+        <input ref={inputElement}/>
+        <br/>
+        <button onClick={()=> console.log(inputElement.current.value)}>Read Input</button>
     </div>
 }
 export default Dashboard
