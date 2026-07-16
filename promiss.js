@@ -21,28 +21,36 @@
 
 // console.log("This is after the promiss is triggered")
 
-const fetchMessage = () =>
-{
-    return new Promise((resolve, reject) => 
-        {
-            // setTimeout(()=> resolve("This is successful promise!!"), 2000)
-            setTimeout(()=> reject("Oh this is failed!"), 2000)
-        })
-}
+// const fetchMessage = () =>
+// {
+//     return new Promise((resolve, reject) => 
+//         {
+//             // setTimeout(()=> resolve("This is successful promise!!"), 2000)
+//             setTimeout(()=> reject("Oh this is failed!"), 2000)
+//         })
+// }
 
-async function getMessage()
-{
-    try
-    {
-        const message = await fetchMessage()
-        console.log("Message from promiss: ",message)
-    }
-    catch(error)
-    {
-        console.log("Error: ", error)
-    }
-}
+// async function getMessage()
+// {
+//     try
+//     {
+//         const message = await fetchMessage()
+//         console.log("Message from promiss: ",message)
+//     }
+//     catch(error)
+//     {
+//         console.log("Error: ", error)
+//     }
+// }
 
-console.log("This is before getMessage is called!")
-getMessage()
-console.log("This is after getMessage is called!")
+// console.log("This is before getMessage is called!")
+// getMessage()
+// console.log("This is after getMessage is called!")
+
+let a = 1
+let b = 2
+
+[a, b] = [b, a]
+
+console.log(a)
+console.log(b)

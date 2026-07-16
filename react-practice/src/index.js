@@ -26,8 +26,8 @@ root.render(
       console.log("This is a callback function from Index.js")
     }} callBackFun = {myParentCallBackFunction}/> */}
     {/* <ReactForms/> */}
-    {/* <ReactRouterExample/> */}
-    <PropDrilling/>
+    <ReactRouterExample/>
+    {/* <PropDrilling/> */}
   </React.StrictMode>
 );
 
